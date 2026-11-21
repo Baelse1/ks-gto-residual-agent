@@ -1,0 +1,15 @@
+{
+  "mode": "local tool integration checks; no model",
+  "checks": {
+    "file_write_read_diff": "passed",
+    "out_of_scope_writes": "blocked",
+    "command_exit_statuses": [
+      0,
+      7
+    ],
+    "undeclared_alias": "blocked",
+    "command_artifact_sha256_matches_write": true,
+    "model_call_budget_guard": "passed",
+    "checkpoint_restore": "passed"
+  }
+}

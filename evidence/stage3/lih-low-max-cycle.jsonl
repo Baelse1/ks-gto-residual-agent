@@ -1,0 +1,4 @@
+{"time_utc": "2026-11-21T12:00:57.468984+00:00", "event": "start", "case": "lih", "level": 3, "mode": "baseline"}
+{"time_utc": "2026-11-21T12:00:57.527626+00:00", "event": "scf_start", "label": "base", "shells": [], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:57.611818+00:00", "event": "scf_end", "label": "base", "status": "scf_check_failed", "energy_ha": -7.77362626461357, "nao": 6, "wall_seconds": 0.07005466900000101}
+{"time_utc": "2026-11-21T12:00:57.620145+00:00", "event": "stop", "status": "failed", "error": {"type": "NumericalIssue", "message": "base: scf_check_failed; raw SCF diagnostics saved."}}

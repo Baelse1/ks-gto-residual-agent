@@ -1,0 +1,32 @@
+{
+  "mode": "operator tool integration check; no model",
+  "result": {
+    "ok": true,
+    "argv": [
+      "wsl",
+      "-d",
+      "Ubuntu",
+      "--cd",
+      "/mnt/d/ksagent",
+      "--",
+      "env",
+      "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+      "OMP_NUM_THREADS=1",
+      "OPENBLAS_NUM_THREADS=1",
+      "/mnt/d/ks_research/.venv-pyscf/bin/python",
+      "scripts/stage1_smoke.py",
+      "--output",
+      "evidence/stage2-smoke.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 5.92,
+    "artifacts": [
+      {
+        "path": "evidence/stage2-smoke.json",
+        "sha256": "8c3553576851b402070152bd1302f1e6d9573ea9827401df198c2ea68a93d836"
+      }
+    ],
+    "stdout": "{\n  \"python\": \"3.14.4\",\n  \"pyscf\": \"2.15.0\",\n  \"numpy\": \"2.5.4\",\n  \"scipy\": \"1.18.1\",\n  \"atoms\": \"Li 0 0 0; H 0 0 3\",\n  \"unit\": \"Bohr\",\n  \"charge\": 0,\n  \"spin\": 0,\n  \"xc\": \"LDA_X,VWN\",\n  \"grid_level\": 3,\n  \"grid_points\": 23536,\n  \"scf_energy_tol\": 1e-11,\n  \"scf_gradient_tol\": 1e-08,\n  \"threads\": 1,\n  \"base_basis\": \"sto-3g\",\n  \"added_shells\": {\n    \"Li\": [\n      [\n        0,\n        [\n          0.08,\n          1.0\n        ]\n      ]\n    ],\n    \"H\": [\n      [\n        0,\n        [\n          0.2,\n          1.0\n        ]\n      ]\n    ]\n  },\n  \"base_ao\": 6,\n  \"union_ao\": 8,\n  \"base_converged\": true,\n  \"union_converged\": true,\n  \"base_energy_ha\": -7.79228507894177,\n  \"union_energy_ha\": -7.804892688582569,\n  \"embedding_overlap_error\": 0.0,\n  \"embedding_fock_error\": 2.749224099065377e-17,\n  \"old_eigen_residual_frobenius\": 1.1402427455935716e-10,\n  \"old_stationarity_dual\": 4.4092425729564716e-11,\n  \"new_space_dual\": 0.05866972935919971,\n  \"squared_dual_closure_error\": 1.951563910473908e-17,\n  \"orthogonality_error\": 8.137691909153976e-16,\n  \"union_overlap_min_eigenvalue\": 0.008141825864314367,\n  \"frozen_separation_ha\": 0.11924041319225986,\n  \"frozen_sin_theta_frobenius\": 0.09545883865669977,\n  \"frozen_sin_theta_bound\": 0.7392974509412724,\n  \"elapsed_s\": 0.2064972530000002\n}\n",
+    "stderr": "w\u0000s\u0000l\u0000:\u0000 \u0000\ufffdhKm0R \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000\ufffdN\u0006tM\ufffdn\u007f\f\ufffdFO*g\\\ufffd\ufffdP0R \u0000W\u0000S\u0000L\u0000\u00020N\u0000A\u0000T\u0000 \u0000!j\u000f_\u000bN\ufffdv \u0000W\u0000S\u0000L\u0000 \u0000\nN/e\u0001c \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000\ufffdN\u0006t\u00020\n\u0000\n\u0000"
+  }
+}

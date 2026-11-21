@@ -1,0 +1,210 @@
+{
+  "goal": "Run a scientific pilot of atom-local vs global Schur vs fixed shell choices on small all-electron RKS LDA systems. Under the original LiH fixed geometry and equal AO costs, find a controlled variant that has a chance to distinguish the strategies; negative or reversed results are valuable. Stage 3 LiH (3.0 Bohr) with s,p,s and +1,+4,+5 AO: local and global took identical Li_s32/H_p35/H_s20; both beat fixed by 4.705 mHa at +5 across grids 3/4/5 and QZ/5Z; the middle first-s scores swapped relative to actual energy drop. See docs/numerics.md and evidence/stage3/matched-budget.csv. Use live scholarly search to investigate a knowledge gap, read public primary text, and link a specific observed passage to a method or parameter choice. docs/literature.md has public originals that may help if a DOI is blocked. Design, author, and run a small analysis or experiment in experiments/stage4_probe.py, which accepts --output PATH (JSON). The scientific backend and the stage 3 config are available in experiments/gaussian_rks.py and config/stage3.json. Use the permitted probe command aliases, read the resulting JSON, and follow up on the actual failure, anomaly or changed ranking with a controlled revised experiment or check. Preserve fixed-geometry assumptions, matched costs and named finite reference, report SCF failures and time, and assess both grids or both reference bases where useful. Treat unconfirmed citations and unrun predictions as such. Asset and compute bounds: keep each probe under 90 seconds and use at most a small handful of LiH runs. Available aliases are stage4_compile, stage4_probe, stage4_followup, lih_baseline, lih_comparison and lih_variant. We need the autonomous chain, including real tool results and a follow-up based on them; continue until those exist or the budget stops you.",
+  "next_question": "Choose and execute a new scholarly metadata query for the gap that most plausibly explains either the coincident routes or the residual-score versus energy-drop mismatch.",
+  "budget": {
+    "steps": 12,
+    "model_calls": 12,
+    "wall_seconds": 1700,
+    "model_timeout_seconds": 180
+  },
+  "permissions": {
+    "tools": [
+      "search_literature",
+      "read_source",
+      "read_file",
+      "write_file",
+      "run_check",
+      "save_finding"
+    ],
+    "read_paths": [
+      "README.md",
+      "docs/",
+      "scripts/",
+      "experiments/",
+      "research_notes/",
+      "evidence/stage1/",
+      "evidence/stage2-smoke.json",
+      "config/stage3.json",
+      "evidence/stage3/",
+      "runs/stage4/"
+    ],
+    "write_paths": [
+      "experiments/",
+      "research_notes/"
+    ],
+    "commands": {
+      "git_status": {
+        "argv": [
+          "git",
+          "status",
+          "--short",
+          "--branch"
+        ],
+        "timeout_seconds": 10
+      },
+      "lih_baseline": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.run_baseline",
+          "--case",
+          "lih",
+          "--level",
+          "3",
+          "--mode",
+          "baseline",
+          "--output",
+          "runs/stage4/lih-baseline.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/lih-baseline.json",
+          "runs/stage4/lih-baseline.jsonl"
+        ]
+      },
+      "lih_comparison": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.run_baseline",
+          "--case",
+          "lih",
+          "--level",
+          "3",
+          "--mode",
+          "comparison",
+          "--output",
+          "runs/stage4/lih-comparison.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/lih-comparison.json",
+          "runs/stage4/lih-comparison.jsonl"
+        ]
+      },
+      "lih_variant": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.run_baseline",
+          "--case",
+          "lih",
+          "--level",
+          "3",
+          "--mode",
+          "comparison",
+          "--config",
+          "experiments/stage4-variant.json",
+          "--output",
+          "runs/stage4/lih-variant.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/lih-variant.json",
+          "runs/stage4/lih-variant.jsonl"
+        ]
+      },
+      "stage4_compile": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "py_compile",
+          "experiments/stage4_probe.py"
+        ],
+        "timeout_seconds": 20
+      },
+      "stage4_probe": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.stage4_probe",
+          "--output",
+          "runs/stage4/stage4_probe.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/stage4_probe.json"
+        ]
+      },
+      "stage4_followup": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.stage4_probe",
+          "--output",
+          "runs/stage4/stage4_followup.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/stage4_followup.json"
+        ]
+      }
+    }
+  }
+}

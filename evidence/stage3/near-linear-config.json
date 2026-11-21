@@ -1,0 +1,198 @@
+{
+  "molecules": {
+    "lih": {
+      "atoms": [
+        [
+          "Li",
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          "H",
+          [
+            0,
+            0,
+            3
+          ]
+        ]
+      ],
+      "candidates": [
+        [
+          "Li_s32",
+          0,
+          0,
+          0.32
+        ],
+        [
+          "Li_s08",
+          0,
+          0,
+          0.08
+        ],
+        [
+          "H_s100",
+          1,
+          0,
+          1
+        ],
+        [
+          "H_s20",
+          1,
+          0,
+          0.2
+        ],
+        [
+          "Li_p35",
+          0,
+          1,
+          0.35
+        ],
+        [
+          "Li_p12",
+          0,
+          1,
+          0.12
+        ],
+        [
+          "H_p95",
+          1,
+          1,
+          0.95
+        ],
+        [
+          "H_p35",
+          1,
+          1,
+          0.35
+        ],
+        [
+          "Li_s32_near_duplicate",
+          0,
+          0,
+          0.3200000001
+        ]
+      ],
+      "holdout": [
+        [
+          "Li_d45",
+          0,
+          2,
+          0.45
+        ],
+        [
+          "H_d80",
+          1,
+          2,
+          0.8
+        ],
+        [
+          "H_s04",
+          1,
+          0,
+          0.04
+        ]
+      ]
+    },
+    "h2": {
+      "atoms": [
+        [
+          "H",
+          [
+            0,
+            0,
+            -0.7
+          ]
+        ],
+        [
+          "H",
+          [
+            0,
+            0,
+            0.7
+          ]
+        ]
+      ],
+      "candidates": [
+        [
+          "Ha_s20",
+          0,
+          0,
+          0.2
+        ],
+        [
+          "Hb_s20",
+          1,
+          0,
+          0.2
+        ],
+        [
+          "Ha_p80",
+          0,
+          1,
+          0.8
+        ],
+        [
+          "Hb_p80",
+          1,
+          1,
+          0.8
+        ]
+      ],
+      "holdout": [
+        [
+          "Ha_d80",
+          0,
+          2,
+          0.8
+        ],
+        [
+          "Hb_d80",
+          1,
+          2,
+          0.8
+        ]
+      ]
+    }
+  },
+  "unit": "Bohr",
+  "charge": 0,
+  "spin": 0,
+  "xc": "LDA_X,VWN",
+  "base_basis": "sto-3g",
+  "reference_basis": [
+    "cc-pvqz",
+    "cc-pv5z"
+  ],
+  "shell_angular_momentum_schedule": [
+    0,
+    1,
+    0
+  ],
+  "grid": {
+    "default_level": 3,
+    "sensitivity_levels": [
+      4,
+      5
+    ],
+    "small_rho_cutoff": 0,
+    "partition_gamma": 0.5
+  },
+  "scf": {
+    "conv_tol": 1e-11,
+    "conv_tol_grad": 1e-08,
+    "max_cycle": 100,
+    "init_guess": "minao",
+    "max_memory_mb": 800,
+    "threads": 1
+  },
+  "thresholds": {
+    "normalized_eigen_relative": 1e-09,
+    "linear_check": 1e-10,
+    "stationarity_dual": 1e-07,
+    "quadrature_relative": 5e-05,
+    "score_tie_relative": 1e-10
+  }
+}

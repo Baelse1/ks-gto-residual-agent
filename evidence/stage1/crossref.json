@@ -1,0 +1,21 @@
+{
+  "url": "https://api.crossref.org/works?query.bibliographic=A%20posteriori%20error%20estimates%20for%20Schrodinger%20operators%20discretized%20with%20linear%20combinations%20of%20atomic%20orbitals&rows=3",
+  "status": "ok",
+  "items": [
+    {
+      "doi": "10.1137/24m1700697",
+      "title": "A Posteriori Error Estimates for Schrödinger Operators Discretized with Linear Combinations of Atomic Orbitals",
+      "url": "https://doi.org/10.1137/24m1700697"
+    },
+    {
+      "doi": "10.58837/chula.the.2009.1194",
+      "title": "A posteriori error estimates for semi-linear elliptic partial differential equations",
+      "url": "https://doi.org/10.58837/chula.the.2009.1194"
+    },
+    {
+      "doi": "10.58837/chula.the.2010.1250",
+      "title": "Residual type a posteriori error estimates for semi-linear parabolic partial differential equations",
+      "url": "https://doi.org/10.58837/chula.the.2010.1250"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.venv*/
+.scratch/
+.cache/
+runs/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+

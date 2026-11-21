@@ -1,0 +1,164 @@
+{
+  "goal": "Test when atom-local screening changes matched-AO LiH augmentation. Use the Stage 3 pilot as starting evidence, seek a falsifiable variant, and keep the finite frozen residual and total-energy deviation separate.",
+  "next_question": "Read docs/numerics.md and its Stage 3 evidence. Identify one mechanism behind the coincident local and global routes, then seek a primary source and choose a discriminating numerical check.",
+  "budget": {
+    "steps": 4,
+    "model_calls": 4,
+    "wall_seconds": 660,
+    "model_timeout_seconds": 185
+  },
+  "permissions": {
+    "tools": [
+      "search_literature",
+      "read_source",
+      "read_file",
+      "write_file",
+      "run_check",
+      "save_finding"
+    ],
+    "read_paths": [
+      "README.md",
+      "docs/",
+      "scripts/",
+      "experiments/",
+      "research_notes/",
+      "evidence/stage1/",
+      "evidence/stage2-smoke.json",
+      "config/stage3.json",
+      "evidence/stage3/",
+      "runs/stage4/"
+    ],
+    "write_paths": [
+      "experiments/",
+      "research_notes/"
+    ],
+    "commands": {
+      "git_status": {
+        "argv": [
+          "git",
+          "status",
+          "--short",
+          "--branch"
+        ],
+        "timeout_seconds": 10
+      },
+      "numerics_smoke": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "/mnt/d/ks_research/.venv-pyscf/bin/python",
+          "scripts/stage1_smoke.py",
+          "--output",
+          "evidence/stage2-smoke.json"
+        ],
+        "timeout_seconds": 40,
+        "artifacts": [
+          "evidence/stage2-smoke.json"
+        ]
+      },
+      "lih_baseline": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.run_baseline",
+          "--case",
+          "lih",
+          "--level",
+          "3",
+          "--mode",
+          "baseline",
+          "--output",
+          "runs/stage4/lih-baseline.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/lih-baseline.json",
+          "runs/stage4/lih-baseline.jsonl"
+        ]
+      },
+      "lih_comparison": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.run_baseline",
+          "--case",
+          "lih",
+          "--level",
+          "3",
+          "--mode",
+          "comparison",
+          "--output",
+          "runs/stage4/lih-comparison.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/lih-comparison.json",
+          "runs/stage4/lih-comparison.jsonl"
+        ]
+      },
+      "lih_variant": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "MKL_NUM_THREADS=1",
+          "/mnt/d/ksagent/.venv-science/bin/python",
+          "-m",
+          "experiments.run_baseline",
+          "--case",
+          "lih",
+          "--level",
+          "3",
+          "--mode",
+          "comparison",
+          "--config",
+          "experiments/stage4-variant.json",
+          "--output",
+          "runs/stage4/lih-variant.json"
+        ],
+        "timeout_seconds": 90,
+        "artifacts": [
+          "runs/stage4/lih-variant.json",
+          "runs/stage4/lih-variant.jsonl"
+        ]
+      }
+    }
+  }
+}

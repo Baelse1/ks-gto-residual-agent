@@ -1,0 +1,11 @@
+{"time_utc": "2026-11-21T12:00:53.302430+00:00", "event": "start", "case": "h2", "level": 3, "mode": "baseline"}
+{"time_utc": "2026-11-21T12:00:53.348509+00:00", "event": "scf_start", "label": "base", "shells": [], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:53.418701+00:00", "event": "scf_end", "label": "base", "status": "ok", "energy_ha": -1.1212007042817573, "nao": 2, "wall_seconds": 0.05762167199998203}
+{"time_utc": "2026-11-21T12:00:53.462576+00:00", "event": "diagnostic", "label": "base", "old_dual": 7.004918524569577e-17, "candidate_dual": 0.033111321623857194, "quadrature_relative_closure": 3.732538058462853e-09}
+{"time_utc": "2026-11-21T12:00:53.473482+00:00", "event": "scf_start", "label": "cc-pvqz", "shells": [], "basis": "cc-pvqz"}
+{"time_utc": "2026-11-21T12:00:53.723384+00:00", "event": "scf_end", "label": "cc-pvqz", "status": "ok", "energy_ha": -1.1373267170125234, "nao": 60, "wall_seconds": 0.22432186900005036}
+{"time_utc": "2026-11-21T12:00:53.726429+00:00", "event": "scf_start", "label": "cc-pv5z", "shells": [], "basis": "cc-pv5z"}
+{"time_utc": "2026-11-21T12:00:54.499094+00:00", "event": "scf_end", "label": "cc-pv5z", "status": "ok", "energy_ha": -1.13746281588036, "nao": 110, "wall_seconds": 0.744507747000057}
+{"time_utc": "2026-11-21T12:00:54.518641+00:00", "event": "scf_start", "label": "dictionary_full", "shells": ["Ha_s20", "Hb_s20", "Ha_p80", "Hb_p80"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:54.595160+00:00", "event": "scf_end", "label": "dictionary_full", "status": "ok", "energy_ha": -1.1271312939328313, "nao": 10, "wall_seconds": 0.05137074399999619}
+{"time_utc": "2026-11-21T12:00:54.610208+00:00", "event": "stop", "status": "ok", "error": null}

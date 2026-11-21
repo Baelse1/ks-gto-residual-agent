@@ -1,0 +1,720 @@
+{
+  "status": "ok",
+  "started_utc": "2026-11-21T12:00:11.418777+00:00",
+  "case": "lih",
+  "mode": "baseline",
+  "grid_level": 3,
+  "command_args": [
+    "--mode",
+    "baseline",
+    "--case",
+    "lih",
+    "--level",
+    "3",
+    "--output",
+    "evidence/stage3/lih-baseline.json"
+  ],
+  "config_sha256": "13cd09d044e4ae765808ad463f63468983bf88e11c512f4a61445573068abb7e",
+  "config": {
+    "molecules": {
+      "lih": {
+        "atoms": [
+          [
+            "Li",
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            "H",
+            [
+              0,
+              0,
+              3
+            ]
+          ]
+        ],
+        "candidates": [
+          [
+            "Li_s32",
+            0,
+            0,
+            0.32
+          ],
+          [
+            "Li_s08",
+            0,
+            0,
+            0.08
+          ],
+          [
+            "H_s100",
+            1,
+            0,
+            1
+          ],
+          [
+            "H_s20",
+            1,
+            0,
+            0.2
+          ],
+          [
+            "Li_p35",
+            0,
+            1,
+            0.35
+          ],
+          [
+            "Li_p12",
+            0,
+            1,
+            0.12
+          ],
+          [
+            "H_p95",
+            1,
+            1,
+            0.95
+          ],
+          [
+            "H_p35",
+            1,
+            1,
+            0.35
+          ]
+        ],
+        "holdout": [
+          [
+            "Li_d45",
+            0,
+            2,
+            0.45
+          ],
+          [
+            "H_d80",
+            1,
+            2,
+            0.8
+          ],
+          [
+            "H_s04",
+            1,
+            0,
+            0.04
+          ]
+        ]
+      },
+      "h2": {
+        "atoms": [
+          [
+            "H",
+            [
+              0,
+              0,
+              -0.7
+            ]
+          ],
+          [
+            "H",
+            [
+              0,
+              0,
+              0.7
+            ]
+          ]
+        ],
+        "candidates": [
+          [
+            "Ha_s20",
+            0,
+            0,
+            0.2
+          ],
+          [
+            "Hb_s20",
+            1,
+            0,
+            0.2
+          ],
+          [
+            "Ha_p80",
+            0,
+            1,
+            0.8
+          ],
+          [
+            "Hb_p80",
+            1,
+            1,
+            0.8
+          ]
+        ],
+        "holdout": [
+          [
+            "Ha_d80",
+            0,
+            2,
+            0.8
+          ],
+          [
+            "Hb_d80",
+            1,
+            2,
+            0.8
+          ]
+        ]
+      }
+    },
+    "unit": "Bohr",
+    "charge": 0,
+    "spin": 0,
+    "xc": "LDA_X,VWN",
+    "base_basis": "sto-3g",
+    "reference_basis": [
+      "cc-pvqz",
+      "cc-pv5z"
+    ],
+    "shell_angular_momentum_schedule": [
+      0,
+      1,
+      0
+    ],
+    "grid": {
+      "default_level": 3,
+      "sensitivity_levels": [
+        4,
+        5
+      ],
+      "small_rho_cutoff": 0,
+      "partition_gamma": 0.5
+    },
+    "scf": {
+      "conv_tol": 1e-11,
+      "conv_tol_grad": 1e-08,
+      "max_cycle": 100,
+      "init_guess": "minao",
+      "max_memory_mb": 800,
+      "threads": 1
+    },
+    "thresholds": {
+      "normalized_eigen_relative": 1e-09,
+      "linear_check": 1e-10,
+      "stationarity_dual": 1e-07,
+      "quadrature_relative": 5e-05,
+      "score_tie_relative": 1e-10
+    }
+  },
+  "source_sha256": {
+    "run_baseline.py": "15966565a235a199abfdea112a149064fa5df3a1ce6afd13bb7da2d934396344",
+    "gaussian_rks.py": "284e501d7dad1baa9ac10288d21394c01fa681aee441f52a8dd84caa48bca53c"
+  },
+  "versions": {
+    "python": "3.14.4",
+    "pyscf": "2.15.0",
+    "libxc": "7.1.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0"
+  },
+  "references": {
+    "cc-pvqz": {
+      "nao": 85,
+      "overlap": {
+        "relative_min": 0.00019819163865882977,
+        "scaled_min": 0.0009775842998498018,
+        "scaled_max": 4.932520395235396,
+        "condition": 5045.621534626977
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": true,
+      "energy_ha": -7.918927869730776,
+      "cycles": 10,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 1.0236484120863188e-15,
+      "electron_trace_error": 4.884981308350689e-15,
+      "old_eigen_residual_fro": 6.751423620771397e-09,
+      "old_eigen_residual_dual": 2.2918656518489907e-09,
+      "scf_gradient_norm": 3.0548323634162175e-09,
+      "ks_gap_ha": 0.10596035960340044,
+      "wall_seconds": 0.6116888949999861,
+      "status": "ok",
+      "label": "cc-pvqz",
+      "shells": [],
+      "basis": "cc-pvqz"
+    },
+    "cc-pv5z": {
+      "nao": 146,
+      "overlap": {
+        "relative_min": 2.7005043971619992e-05,
+        "scaled_min": 0.00015608202089101324,
+        "scaled_max": 5.779735854347884,
+        "condition": 37030.11930108001
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": true,
+      "energy_ha": -7.9195024469581465,
+      "cycles": 10,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 1.2381466946269311e-15,
+      "electron_trace_error": 1.7763568394002505e-15,
+      "old_eigen_residual_fro": 6.7030227538537695e-09,
+      "old_eigen_residual_dual": 2.0717001581179454e-09,
+      "scf_gradient_norm": 2.8676244416461465e-09,
+      "ks_gap_ha": 0.10609107103433746,
+      "wall_seconds": 3.137739634000013,
+      "status": "ok",
+      "label": "cc-pv5z",
+      "shells": [],
+      "basis": "cc-pv5z"
+    },
+    "dictionary_full": {
+      "nao": 22,
+      "overlap": {
+        "relative_min": 0.0005554938629118923,
+        "scaled_min": 0.002463755444363711,
+        "scaled_max": 4.435252320248389,
+        "condition": 1800.1999063644225
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": true,
+      "energy_ha": -7.816384398712458,
+      "cycles": 9,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 6.503816126731974e-16,
+      "electron_trace_error": 0.0,
+      "old_eigen_residual_fro": 7.160651851832233e-09,
+      "old_eigen_residual_dual": 2.674877342760705e-09,
+      "scf_gradient_norm": 4.1823379631661395e-09,
+      "ks_gap_ha": 0.11516350237836281,
+      "wall_seconds": 0.11679569099999298,
+      "status": "ok",
+      "label": "dictionary_full",
+      "shells": [
+        "Li_s32",
+        "Li_s08",
+        "H_s100",
+        "H_s20",
+        "Li_p35",
+        "Li_p12",
+        "H_p95",
+        "H_p35"
+      ],
+      "basis": "sto-3g"
+    }
+  },
+  "fits": [
+    {
+      "nao": 6,
+      "overlap": {
+        "relative_min": 0.20339047710435337,
+        "scaled_min": 0.3433399551910098,
+        "scaled_max": 1.6880827464446757,
+        "condition": 4.916651036159037
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": true,
+      "energy_ha": -7.79228507894177,
+      "cycles": 10,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 8.137691909153976e-16,
+      "electron_trace_error": 2.220446049250313e-15,
+      "old_eigen_residual_fro": 1.1402427455935716e-10,
+      "old_eigen_residual_dual": 5.7429468424504695e-11,
+      "scf_gradient_norm": 1.3559185551825588e-10,
+      "ks_gap_ha": 0.1267472751360198,
+      "wall_seconds": 0.11045925299998771,
+      "status": "ok",
+      "label": "base",
+      "shells": [],
+      "basis": "sto-3g"
+    },
+    {
+      "nao": 85,
+      "overlap": {
+        "relative_min": 0.00019819163865882977,
+        "scaled_min": 0.0009775842998498018,
+        "scaled_max": 4.932520395235396,
+        "condition": 5045.621534626977
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": true,
+      "energy_ha": -7.918927869730776,
+      "cycles": 10,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 1.0236484120863188e-15,
+      "electron_trace_error": 4.884981308350689e-15,
+      "old_eigen_residual_fro": 6.751423620771397e-09,
+      "old_eigen_residual_dual": 2.2918656518489907e-09,
+      "scf_gradient_norm": 3.0548323634162175e-09,
+      "ks_gap_ha": 0.10596035960340044,
+      "wall_seconds": 0.6116888949999861,
+      "status": "ok",
+      "label": "cc-pvqz",
+      "shells": [],
+      "basis": "cc-pvqz"
+    },
+    {
+      "nao": 146,
+      "overlap": {
+        "relative_min": 2.7005043971619992e-05,
+        "scaled_min": 0.00015608202089101324,
+        "scaled_max": 5.779735854347884,
+        "condition": 37030.11930108001
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": true,
+      "energy_ha": -7.9195024469581465,
+      "cycles": 10,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 1.2381466946269311e-15,
+      "electron_trace_error": 1.7763568394002505e-15,
+      "old_eigen_residual_fro": 6.7030227538537695e-09,
+      "old_eigen_residual_dual": 2.0717001581179454e-09,
+      "scf_gradient_norm": 2.8676244416461465e-09,
+      "ks_gap_ha": 0.10609107103433746,
+      "wall_seconds": 3.137739634000013,
+      "status": "ok",
+      "label": "cc-pv5z",
+      "shells": [],
+      "basis": "cc-pv5z"
+    },
+    {
+      "nao": 22,
+      "overlap": {
+        "relative_min": 0.0005554938629118923,
+        "scaled_min": 0.002463755444363711,
+        "scaled_max": 4.435252320248389,
+        "condition": 1800.1999063644225
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": true,
+      "energy_ha": -7.816384398712458,
+      "cycles": 9,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 6.503816126731974e-16,
+      "electron_trace_error": 0.0,
+      "old_eigen_residual_fro": 7.160651851832233e-09,
+      "old_eigen_residual_dual": 2.674877342760705e-09,
+      "scf_gradient_norm": 4.1823379631661395e-09,
+      "ks_gap_ha": 0.11516350237836281,
+      "wall_seconds": 0.11679569099999298,
+      "status": "ok",
+      "label": "dictionary_full",
+      "shells": [
+        "Li_s32",
+        "Li_s08",
+        "H_s100",
+        "H_s20",
+        "Li_p35",
+        "Li_p12",
+        "H_p95",
+        "H_p35"
+      ],
+      "basis": "sto-3g"
+    }
+  ],
+  "diagnostics": {
+    "base": {
+      "embedding_overlap_fro": 0.0,
+      "embedding_fock_fro": 2.749224013825436e-17,
+      "fock_symmetry_fro": 1.931622757482219e-16,
+      "union_nao": 22,
+      "union_overlap": {
+        "relative_min": 0.0005554938629118923,
+        "scaled_min": 0.002463755444363711,
+        "scaled_max": 4.435252320248389,
+        "condition": 1800.1999063644225
+      },
+      "old_stationarity_dual": 4.4092425729564716e-11,
+      "occupied_moment_fro": 4.680409748726558e-16,
+      "projected": {
+        "dual_squared": 0.007386795646712137,
+        "rank": 16,
+        "raw_dimension": 16,
+        "scaled_min_eigen": 0.014884893892053002,
+        "scaled_max_eigen": 1.6288207848765481,
+        "eigen_cutoff": 1.6288207848765483e-09
+      },
+      "candidate_space_dual": 0.08594646965822468,
+      "local_squared": {
+        "Li1": 0.005550565705814262,
+        "H2": 0.0018362507455685388
+      },
+      "quadrature_relative_closure": 2.81646760777027e-06,
+      "riesz_abs_closure": 1.3010426069826053e-17,
+      "dual_abs_closure": 1.3010426069826053e-17,
+      "occupied_rotation_squared_diff": 4.597017211338539e-17,
+      "candidates": [
+        {
+          "id": "Li_s32",
+          "atom": 0,
+          "label": "Li1",
+          "l": 0,
+          "exponent": 0.32,
+          "ao_cost": 1,
+          "score": 0.07822407899883782,
+          "projected": {
+            "dual_squared": 0.00611900653521642,
+            "rank": 1,
+            "raw_dimension": 1,
+            "scaled_min_eigen": 0.5486714106043081,
+            "scaled_max_eigen": 0.5486714106043081,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.08270211783752873,
+            "scaled_min": 0.1834238091256561,
+            "scaled_max": 2.2178852721280817,
+            "condition": 12.091588778470411
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "Li_s08",
+          "atom": 0,
+          "label": "Li1",
+          "l": 0,
+          "exponent": 0.08,
+          "ao_cost": 1,
+          "score": 0.049491979614442655,
+          "projected": {
+            "dual_squared": 0.0024494560461564073,
+            "rank": 1,
+            "raw_dimension": 1,
+            "scaled_min_eigen": 0.022348817702146306,
+            "scaled_max_eigen": 0.022348817702146306,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.0034194151711624842,
+            "scaled_min": 0.00815049664086901,
+            "scaled_max": 2.3835937529920126,
+            "condition": 292.44767012600994
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "H_s100",
+          "atom": 1,
+          "label": "H2",
+          "l": 0,
+          "exponent": 1,
+          "ao_cost": 1,
+          "score": 0.018099310319292836,
+          "projected": {
+            "dual_squared": 0.0003275850340340601,
+            "rank": 1,
+            "raw_dimension": 1,
+            "scaled_min_eigen": 0.13363530982395366,
+            "scaled_max_eigen": 0.13363530982395366,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.019211202295371425,
+            "scaled_min": 0.044341399336913674,
+            "scaled_max": 2.3081012138213177,
+            "condition": 52.0529628820228
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "H_s20",
+          "atom": 1,
+          "label": "H2",
+          "l": 0,
+          "exponent": 0.2,
+          "ao_cost": 1,
+          "score": 0.029797545136135407,
+          "projected": {
+            "dual_squared": 0.0008878936961400268,
+            "rank": 1,
+            "raw_dimension": 1,
+            "scaled_min_eigen": 0.21255902413647046,
+            "scaled_max_eigen": 0.21255902413647046,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.0219854652583733,
+            "scaled_min": 0.05721025775403572,
+            "scaled_max": 2.6021854475991515,
+            "condition": 45.48459576579321
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "Li_p35",
+          "atom": 0,
+          "label": "Li1",
+          "l": 1,
+          "exponent": 0.35,
+          "ao_cost": 3,
+          "score": 0.011834312575444077,
+          "projected": {
+            "dual_squared": 0.00014005095413331385,
+            "rank": 3,
+            "raw_dimension": 3,
+            "scaled_min_eigen": 0.392878880763606,
+            "scaled_max_eigen": 0.4064703662633754,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.09180871412788212,
+            "scaled_min": 0.19576985179099463,
+            "scaled_max": 2.1323667764075536,
+            "condition": 10.892212242588222
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "Li_p12",
+          "atom": 0,
+          "label": "Li1",
+          "l": 1,
+          "exponent": 0.12,
+          "ao_cost": 3,
+          "score": 0.007174266598177964,
+          "projected": {
+            "dual_squared": 5.147010122173201e-05,
+            "rank": 3,
+            "raw_dimension": 3,
+            "scaled_min_eigen": 0.08072504244229242,
+            "scaled_max_eigen": 0.08577115123222442,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.010032732235334884,
+            "scaled_min": 0.024187548354051312,
+            "scaled_max": 2.41086354012955,
+            "condition": 99.67374555039352
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "H_p95",
+          "atom": 1,
+          "label": "H2",
+          "l": 1,
+          "exponent": 0.95,
+          "ao_cost": 3,
+          "score": 0.0068847265924748685,
+          "projected": {
+            "dual_squared": 4.7399460253130616e-05,
+            "rank": 3,
+            "raw_dimension": 3,
+            "scaled_min_eigen": 0.9845697524811152,
+            "scaled_max_eigen": 0.997071232907898,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.19230460897545276,
+            "scaled_min": 0.3278119722538789,
+            "scaled_max": 1.7046495869255185,
+            "condition": 5.20008337464053
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "H_p35",
+          "atom": 1,
+          "label": "H2",
+          "l": 1,
+          "exponent": 0.35,
+          "ao_cost": 3,
+          "score": 0.027298034514576117,
+          "projected": {
+            "dual_squared": 0.000745182688358989,
+            "rank": 3,
+            "raw_dimension": 3,
+            "scaled_min_eigen": 0.866607562507097,
+            "scaled_max_eigen": 0.9520260199742431,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.16026961020215197,
+            "scaled_min": 0.2840381783661722,
+            "scaled_max": 1.7722522567310666,
+            "condition": 6.239486068124054
+          },
+          "eligible": true,
+          "rejection": null
+        }
+      ],
+      "frozen": {
+        "separation_ha": 0.11145405255496503,
+        "sin_theta_fro": 0.11065076869290943,
+        "bound": 1.4771894453013021
+      },
+      "holdout_outside_union": {
+        "status": "ok",
+        "dual_squared": 0.00035502574754752835,
+        "rank": 11,
+        "raw_dimension": 11,
+        "scaled_min_eigen": 0.11388158300911741,
+        "scaled_max_eigen": 1.1525288646694976,
+        "eigen_cutoff": 1.1525288646694977e-09,
+        "embedding_overlap_fro": 0.0,
+        "embedding_fock_fro": 2.749224013825436e-17,
+        "fock_symmetry_fro": 2.494227808057183e-16
+      },
+      "wall_seconds": 0.06596988500001544
+    }
+  },
+  "trajectories": {},
+  "first_step_exhaustive": [],
+  "grid_protocol": {
+    "level": 3,
+    "points": 23536,
+    "sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+    "radial_method": "treutler_ahlrichs",
+    "angular_prune": "nwchem_prune",
+    "becke_scheme": "original_becke",
+    "atom_radii_adjust": "treutler_atomic_radii_adjust",
+    "small_rho_cutoff": 0
+  },
+  "base_deviations": {
+    "cc-pvqz": {
+      "signed_ha": 0.1266427907890062,
+      "absolute_ha": 0.1266427907890062
+    },
+    "cc-pv5z": {
+      "signed_ha": 0.1272173680163764,
+      "absolute_ha": 0.1272173680163764
+    },
+    "dictionary_full": {
+      "signed_ha": 0.0240993197706878,
+      "absolute_ha": 0.0240993197706878
+    }
+  },
+  "finished_utc": "2026-11-21T12:00:15.721553+00:00"
+}

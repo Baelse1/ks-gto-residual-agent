@@ -1,0 +1,291 @@
+{
+  "case": "lih",
+  "atoms_bohr": [
+    [
+      "Li",
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "H",
+      [
+        0,
+        0,
+        3
+      ]
+    ]
+  ],
+  "xc": "LDA_X,VWN",
+  "base_basis": "sto-3g",
+  "added_ao": 1,
+  "grid": {
+    "level": 3,
+    "points": 23536,
+    "sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+    "radial_method": "treutler_ahlrichs",
+    "angular_prune": "nwchem_prune",
+    "becke_scheme": "original_becke",
+    "atom_radii_adjust": "treutler_atomic_radii_adjust",
+    "small_rho_cutoff": 0
+  },
+  "baseline": {
+    "nao": 6,
+    "overlap": {
+      "relative_min": 0.20339047710435337,
+      "scaled_min": 0.3433399551910098,
+      "scaled_max": 1.6880827464446757,
+      "condition": 4.916651036159037
+    },
+    "grid_level": 3,
+    "grid_points": 23536,
+    "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+    "converged": true,
+    "energy_ha": -7.79228507894177,
+    "cycles": 10,
+    "occupied_orbitals": 2,
+    "electron_count": 4,
+    "overlap_orthogonality": 8.137691909153976e-16,
+    "electron_trace_error": 2.220446049250313e-15,
+    "old_eigen_residual_fro": 1.1402427455935716e-10,
+    "old_eigen_residual_dual": 5.7429468424504695e-11,
+    "scf_gradient_norm": 1.3559185551825588e-10,
+    "ks_gap_ha": 0.1267472751360198,
+    "wall_seconds": 0.10538838600000133,
+    "status": "ok"
+  },
+  "reference_basis": "cc-pvqz",
+  "candidates": [
+    {
+      "id": "Li_s32",
+      "ao_cost": 1,
+      "schur_score": 0.07822407899883782,
+      "status": "ok",
+      "embedding_checks": {
+        "embedding_overlap_fro": 0.0,
+        "embedding_fock_fro": 4.1319046172009604e-17,
+        "fock_symmetry_fro": 9.096818450544955e-17
+      },
+      "frozen_drop_ha": 0.019580340672368912,
+      "frozen_density_total_drop_ha": 0.01614998684766178,
+      "scf": {
+        "nao": 7,
+        "overlap": {
+          "relative_min": 0.08270211783752876,
+          "scaled_min": 0.18342380912565612,
+          "scaled_max": 2.2178852721280813,
+          "condition": 12.091588778470406
+        },
+        "grid_level": 3,
+        "grid_points": 23536,
+        "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+        "converged": true,
+        "energy_ha": -7.809085003205409,
+        "cycles": 9,
+        "occupied_orbitals": 2,
+        "electron_count": 4,
+        "overlap_orthogonality": 1.5835661249553403e-15,
+        "electron_trace_error": 3.552713678800501e-15,
+        "old_eigen_residual_fro": 9.933713729455044e-09,
+        "old_eigen_residual_dual": 5.64845846629481e-09,
+        "scf_gradient_norm": 9.633048575128148e-09,
+        "ks_gap_ha": 0.12809668627548965,
+        "wall_seconds": 0.07320602800000131,
+        "status": "ok"
+      },
+      "scf_drop_ha": 0.016799924263638744,
+      "relaxation_after_frozen_ha": 0.0006499374159769644,
+      "signed_reference_error_ha": 0.10984286652536746,
+      "absolute_reference_error_ha": 0.10984286652536746,
+      "wall_seconds": 0.10265487300000586
+    },
+    {
+      "id": "Li_s08",
+      "ao_cost": 1,
+      "schur_score": 0.049491979614442655,
+      "status": "ok",
+      "embedding_checks": {
+        "embedding_overlap_fro": 0.0,
+        "embedding_fock_fro": 4.1319046172009604e-17,
+        "fock_symmetry_fro": 5.0219727445464633e-17
+      },
+      "frozen_drop_ha": 0.006404575975270443,
+      "frozen_density_total_drop_ha": 0.005948132025643815,
+      "scf": {
+        "nao": 7,
+        "overlap": {
+          "relative_min": 0.003419415171162492,
+          "scaled_min": 0.008150496640869028,
+          "scaled_max": 2.383593752992012,
+          "condition": 292.44767012600926
+        },
+        "grid_level": 3,
+        "grid_points": 23536,
+        "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+        "converged": true,
+        "energy_ha": -7.7983137658558945,
+        "cycles": 8,
+        "occupied_orbitals": 2,
+        "electron_count": 4,
+        "overlap_orthogonality": 1.3238267549612899e-15,
+        "electron_trace_error": 2.6645352591003757e-15,
+        "old_eigen_residual_fro": 5.750755627356437e-09,
+        "old_eigen_residual_dual": 3.1619521677839217e-09,
+        "scf_gradient_norm": 5.272357400173182e-09,
+        "ks_gap_ha": 0.12523238047310215,
+        "wall_seconds": 0.06515852199999017,
+        "status": "ok"
+      },
+      "scf_drop_ha": 0.006028686914124393,
+      "relaxation_after_frozen_ha": 8.055488848057735e-05,
+      "signed_reference_error_ha": 0.1206141038748818,
+      "absolute_reference_error_ha": 0.1206141038748818,
+      "wall_seconds": 0.09475567700000909
+    },
+    {
+      "id": "H_s100",
+      "ao_cost": 1,
+      "schur_score": 0.018099310319292836,
+      "status": "ok",
+      "embedding_checks": {
+        "embedding_overlap_fro": 0.0,
+        "embedding_fock_fro": 2.749224013825436e-17,
+        "fock_symmetry_fro": 1.3382374501374596e-17
+      },
+      "frozen_drop_ha": 0.0018745456153874684,
+      "frozen_density_total_drop_ha": 0.001861833630634635,
+      "scf": {
+        "nao": 7,
+        "overlap": {
+          "relative_min": 0.019211202295371425,
+          "scaled_min": 0.044341399336913674,
+          "scaled_max": 2.3081012138213177,
+          "condition": 52.0529628820228
+        },
+        "grid_level": 3,
+        "grid_points": 23536,
+        "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+        "converged": true,
+        "energy_ha": -7.794157907387991,
+        "cycles": 9,
+        "occupied_orbitals": 2,
+        "electron_count": 4,
+        "overlap_orthogonality": 1.9059522529441276e-15,
+        "electron_trace_error": 4.440892098500626e-15,
+        "old_eigen_residual_fro": 6.623530914452703e-10,
+        "old_eigen_residual_dual": 2.905214903198475e-10,
+        "scf_gradient_norm": 4.930047344001435e-10,
+        "ks_gap_ha": 0.12487049605947576,
+        "wall_seconds": 0.07321664599999167,
+        "status": "ok"
+      },
+      "scf_drop_ha": 0.001872828446220609,
+      "relaxation_after_frozen_ha": 1.0994815585974038e-05,
+      "signed_reference_error_ha": 0.12476996234278559,
+      "absolute_reference_error_ha": 0.12476996234278559,
+      "wall_seconds": 0.09850044600000274
+    },
+    {
+      "id": "H_s20",
+      "ao_cost": 1,
+      "schur_score": 0.029797545136135407,
+      "status": "ok",
+      "embedding_checks": {
+        "embedding_overlap_fro": 0.0,
+        "embedding_fock_fro": 2.749224013825436e-17,
+        "fock_symmetry_fro": 1.44107578892401e-17
+      },
+      "frozen_drop_ha": 0.00655134089649323,
+      "frozen_density_total_drop_ha": 0.006002497718615274,
+      "scf": {
+        "nao": 7,
+        "overlap": {
+          "relative_min": 0.0219854652583733,
+          "scaled_min": 0.05721025775403572,
+          "scaled_max": 2.6021854475991515,
+          "condition": 45.48459576579321
+        },
+        "grid_level": 3,
+        "grid_points": 23536,
+        "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+        "converged": true,
+        "energy_ha": -7.798515346769825,
+        "cycles": 8,
+        "occupied_orbitals": 2,
+        "electron_count": 4,
+        "overlap_orthogonality": 1.4453211262340894e-15,
+        "electron_trace_error": 1.7763568394002505e-15,
+        "old_eigen_residual_fro": 5.380163975674045e-09,
+        "old_eigen_residual_dual": 2.5718629038663013e-09,
+        "scf_gradient_norm": 4.151087937953397e-09,
+        "ks_gap_ha": 0.11952526210786107,
+        "wall_seconds": 0.07005262700000969,
+        "status": "ok"
+      },
+      "scf_drop_ha": 0.006230267828055247,
+      "relaxation_after_frozen_ha": 0.0002277701094399731,
+      "signed_reference_error_ha": 0.12041252296095095,
+      "absolute_reference_error_ha": 0.12041252296095095,
+      "wall_seconds": 0.09667396399999006
+    }
+  ],
+  "rankings": {
+    "schur_score": [
+      "Li_s32",
+      "Li_s08",
+      "H_s20",
+      "H_s100"
+    ],
+    "frozen_drop_ha": [
+      "Li_s32",
+      "H_s20",
+      "Li_s08",
+      "H_s100"
+    ],
+    "frozen_density_total_drop_ha": [
+      "Li_s32",
+      "H_s20",
+      "Li_s08",
+      "H_s100"
+    ],
+    "scf_drop_ha": [
+      "Li_s32",
+      "H_s20",
+      "Li_s08",
+      "H_s100"
+    ]
+  },
+  "reference": {
+    "nao": 85,
+    "overlap": {
+      "relative_min": 0.00019819163865882977,
+      "scaled_min": 0.0009775842998498018,
+      "scaled_max": 4.932520395235396,
+      "condition": 5045.621534626977
+    },
+    "grid_level": 3,
+    "grid_points": 23536,
+    "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+    "converged": true,
+    "energy_ha": -7.918927869730776,
+    "cycles": 10,
+    "occupied_orbitals": 2,
+    "electron_count": 4,
+    "overlap_orthogonality": 1.0236484120863188e-15,
+    "electron_trace_error": 4.884981308350689e-15,
+    "old_eigen_residual_fro": 6.751423620771397e-09,
+    "old_eigen_residual_dual": 2.2918656518489907e-09,
+    "scf_gradient_norm": 3.0548323634162175e-09,
+    "ks_gap_ha": 0.10596035960340044,
+    "wall_seconds": 0.6435498379999984,
+    "status": "ok"
+  },
+  "strategy_choices": {
+    "fixed": "Li_s32",
+    "global": "Li_s32",
+    "local": "Li_s32"
+  },
+  "wall_seconds": 1.2695510630000086
+}

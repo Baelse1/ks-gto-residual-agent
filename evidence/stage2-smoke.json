@@ -1,0 +1,55 @@
+{
+  "python": "3.14.4",
+  "pyscf": "2.15.0",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "atoms": "Li 0 0 0; H 0 0 3",
+  "unit": "Bohr",
+  "charge": 0,
+  "spin": 0,
+  "xc": "LDA_X,VWN",
+  "grid_level": 3,
+  "grid_points": 23536,
+  "scf_energy_tol": 1e-11,
+  "scf_gradient_tol": 1e-08,
+  "threads": 1,
+  "base_basis": "sto-3g",
+  "added_shells": {
+    "Li": [
+      [
+        0,
+        [
+          0.08,
+          1.0
+        ]
+      ]
+    ],
+    "H": [
+      [
+        0,
+        [
+          0.2,
+          1.0
+        ]
+      ]
+    ]
+  },
+  "base_ao": 6,
+  "union_ao": 8,
+  "base_converged": true,
+  "union_converged": true,
+  "base_energy_ha": -7.79228507894177,
+  "union_energy_ha": -7.804892688582569,
+  "embedding_overlap_error": 0.0,
+  "embedding_fock_error": 2.749224099065377e-17,
+  "old_eigen_residual_frobenius": 1.1402427455935716e-10,
+  "old_stationarity_dual": 4.4092425729564716e-11,
+  "new_space_dual": 0.05866972935919971,
+  "squared_dual_closure_error": 1.951563910473908e-17,
+  "orthogonality_error": 8.137691909153976e-16,
+  "union_overlap_min_eigenvalue": 0.008141825864314367,
+  "frozen_separation_ha": 0.11924041319225986,
+  "frozen_sin_theta_frobenius": 0.09545883865669977,
+  "frozen_sin_theta_bound": 0.7392974509412724,
+  "elapsed_s": 0.2064972530000002
+}

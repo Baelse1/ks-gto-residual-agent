@@ -1,0 +1,612 @@
+{
+  "status": "ok",
+  "started_utc": "2026-11-21T12:00:53.285276+00:00",
+  "case": "h2",
+  "mode": "baseline",
+  "grid_level": 3,
+  "command_args": [
+    "--mode",
+    "baseline",
+    "--case",
+    "h2",
+    "--level",
+    "3",
+    "--output",
+    "evidence/stage3/h2-symmetry.json"
+  ],
+  "config_sha256": "13cd09d044e4ae765808ad463f63468983bf88e11c512f4a61445573068abb7e",
+  "config": {
+    "molecules": {
+      "lih": {
+        "atoms": [
+          [
+            "Li",
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            "H",
+            [
+              0,
+              0,
+              3
+            ]
+          ]
+        ],
+        "candidates": [
+          [
+            "Li_s32",
+            0,
+            0,
+            0.32
+          ],
+          [
+            "Li_s08",
+            0,
+            0,
+            0.08
+          ],
+          [
+            "H_s100",
+            1,
+            0,
+            1
+          ],
+          [
+            "H_s20",
+            1,
+            0,
+            0.2
+          ],
+          [
+            "Li_p35",
+            0,
+            1,
+            0.35
+          ],
+          [
+            "Li_p12",
+            0,
+            1,
+            0.12
+          ],
+          [
+            "H_p95",
+            1,
+            1,
+            0.95
+          ],
+          [
+            "H_p35",
+            1,
+            1,
+            0.35
+          ]
+        ],
+        "holdout": [
+          [
+            "Li_d45",
+            0,
+            2,
+            0.45
+          ],
+          [
+            "H_d80",
+            1,
+            2,
+            0.8
+          ],
+          [
+            "H_s04",
+            1,
+            0,
+            0.04
+          ]
+        ]
+      },
+      "h2": {
+        "atoms": [
+          [
+            "H",
+            [
+              0,
+              0,
+              -0.7
+            ]
+          ],
+          [
+            "H",
+            [
+              0,
+              0,
+              0.7
+            ]
+          ]
+        ],
+        "candidates": [
+          [
+            "Ha_s20",
+            0,
+            0,
+            0.2
+          ],
+          [
+            "Hb_s20",
+            1,
+            0,
+            0.2
+          ],
+          [
+            "Ha_p80",
+            0,
+            1,
+            0.8
+          ],
+          [
+            "Hb_p80",
+            1,
+            1,
+            0.8
+          ]
+        ],
+        "holdout": [
+          [
+            "Ha_d80",
+            0,
+            2,
+            0.8
+          ],
+          [
+            "Hb_d80",
+            1,
+            2,
+            0.8
+          ]
+        ]
+      }
+    },
+    "unit": "Bohr",
+    "charge": 0,
+    "spin": 0,
+    "xc": "LDA_X,VWN",
+    "base_basis": "sto-3g",
+    "reference_basis": [
+      "cc-pvqz",
+      "cc-pv5z"
+    ],
+    "shell_angular_momentum_schedule": [
+      0,
+      1,
+      0
+    ],
+    "grid": {
+      "default_level": 3,
+      "sensitivity_levels": [
+        4,
+        5
+      ],
+      "small_rho_cutoff": 0,
+      "partition_gamma": 0.5
+    },
+    "scf": {
+      "conv_tol": 1e-11,
+      "conv_tol_grad": 1e-08,
+      "max_cycle": 100,
+      "init_guess": "minao",
+      "max_memory_mb": 800,
+      "threads": 1
+    },
+    "thresholds": {
+      "normalized_eigen_relative": 1e-09,
+      "linear_check": 1e-10,
+      "stationarity_dual": 1e-07,
+      "quadrature_relative": 5e-05,
+      "score_tie_relative": 1e-10
+    }
+  },
+  "source_sha256": {
+    "run_baseline.py": "15966565a235a199abfdea112a149064fa5df3a1ce6afd13bb7da2d934396344",
+    "gaussian_rks.py": "284e501d7dad1baa9ac10288d21394c01fa681aee441f52a8dd84caa48bca53c"
+  },
+  "versions": {
+    "python": "3.14.4",
+    "pyscf": "2.15.0",
+    "libxc": "7.1.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0"
+  },
+  "references": {
+    "cc-pvqz": {
+      "nao": 60,
+      "overlap": {
+        "relative_min": 6.33541793847799e-05,
+        "scaled_min": 0.00032224384028952177,
+        "scaled_max": 5.08638646130009,
+        "condition": 15784.278317718028
+      },
+      "grid_level": 3,
+      "grid_points": 19616,
+      "grid_sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+      "converged": true,
+      "energy_ha": -1.1373267170125234,
+      "cycles": 6,
+      "occupied_orbitals": 1,
+      "electron_count": 2,
+      "overlap_orthogonality": 4.440892098500626e-16,
+      "electron_trace_error": 4.440892098500626e-16,
+      "old_eigen_residual_fro": 1.215358356374445e-09,
+      "old_eigen_residual_dual": 3.5230944269056824e-10,
+      "scf_gradient_norm": 4.870394448153229e-10,
+      "ks_gap_ha": 0.4132150185120733,
+      "wall_seconds": 0.22432186900005036,
+      "status": "ok",
+      "label": "cc-pvqz",
+      "shells": [],
+      "basis": "cc-pvqz"
+    },
+    "cc-pv5z": {
+      "nao": 110,
+      "overlap": {
+        "relative_min": 7.52483648961747e-06,
+        "scaled_min": 4.5651337508237694e-05,
+        "scaled_max": 6.0667547489205855,
+        "condition": 132893.25307995305
+      },
+      "grid_level": 3,
+      "grid_points": 19616,
+      "grid_sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+      "converged": true,
+      "energy_ha": -1.13746281588036,
+      "cycles": 6,
+      "occupied_orbitals": 1,
+      "electron_count": 2,
+      "overlap_orthogonality": 4.440892098500626e-16,
+      "electron_trace_error": 8.881784197001252e-16,
+      "old_eigen_residual_fro": 1.2156663522222216e-09,
+      "old_eigen_residual_dual": 3.2292914010433445e-10,
+      "scf_gradient_norm": 4.4715916418147427e-10,
+      "ks_gap_ha": 0.40418697100416384,
+      "wall_seconds": 0.744507747000057,
+      "status": "ok",
+      "label": "cc-pv5z",
+      "shells": [],
+      "basis": "cc-pv5z"
+    },
+    "dictionary_full": {
+      "nao": 10,
+      "overlap": {
+        "relative_min": 0.009872189486983731,
+        "scaled_min": 0.03444061574201134,
+        "scaled_max": 3.4886501912691763,
+        "condition": 101.29465214565407
+      },
+      "grid_level": 3,
+      "grid_points": 19616,
+      "grid_sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+      "converged": true,
+      "energy_ha": -1.1271312939328313,
+      "cycles": 5,
+      "occupied_orbitals": 1,
+      "electron_count": 2,
+      "overlap_orthogonality": 1.1102230246251565e-16,
+      "electron_trace_error": 4.440892098500626e-16,
+      "old_eigen_residual_fro": 7.652033171681986e-13,
+      "old_eigen_residual_dual": 2.9007150203220005e-13,
+      "scf_gradient_norm": 4.014033217037836e-13,
+      "ks_gap_ha": 0.47394764670879125,
+      "wall_seconds": 0.05137074399999619,
+      "status": "ok",
+      "label": "dictionary_full",
+      "shells": [
+        "Ha_s20",
+        "Hb_s20",
+        "Ha_p80",
+        "Hb_p80"
+      ],
+      "basis": "sto-3g"
+    }
+  },
+  "fits": [
+    {
+      "nao": 2,
+      "overlap": {
+        "relative_min": 0.20531432283787446,
+        "scaled_min": 0.3406817938651362,
+        "scaled_max": 1.6593182061348641,
+        "condition": 4.8705808059462345
+      },
+      "grid_level": 3,
+      "grid_points": 19616,
+      "grid_sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+      "converged": true,
+      "energy_ha": -1.1212007042817573,
+      "cycles": 2,
+      "occupied_orbitals": 1,
+      "electron_count": 2,
+      "overlap_orthogonality": 2.220446049250313e-16,
+      "electron_trace_error": 4.440892098500626e-16,
+      "old_eigen_residual_fro": 1.5700924586837752e-16,
+      "old_eigen_residual_dual": 8.215661251983397e-17,
+      "scf_gradient_norm": 0.0,
+      "ks_gap_ha": 0.7476789112686583,
+      "wall_seconds": 0.05762167199998203,
+      "status": "ok",
+      "label": "base",
+      "shells": [],
+      "basis": "sto-3g"
+    },
+    {
+      "nao": 60,
+      "overlap": {
+        "relative_min": 6.33541793847799e-05,
+        "scaled_min": 0.00032224384028952177,
+        "scaled_max": 5.08638646130009,
+        "condition": 15784.278317718028
+      },
+      "grid_level": 3,
+      "grid_points": 19616,
+      "grid_sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+      "converged": true,
+      "energy_ha": -1.1373267170125234,
+      "cycles": 6,
+      "occupied_orbitals": 1,
+      "electron_count": 2,
+      "overlap_orthogonality": 4.440892098500626e-16,
+      "electron_trace_error": 4.440892098500626e-16,
+      "old_eigen_residual_fro": 1.215358356374445e-09,
+      "old_eigen_residual_dual": 3.5230944269056824e-10,
+      "scf_gradient_norm": 4.870394448153229e-10,
+      "ks_gap_ha": 0.4132150185120733,
+      "wall_seconds": 0.22432186900005036,
+      "status": "ok",
+      "label": "cc-pvqz",
+      "shells": [],
+      "basis": "cc-pvqz"
+    },
+    {
+      "nao": 110,
+      "overlap": {
+        "relative_min": 7.52483648961747e-06,
+        "scaled_min": 4.5651337508237694e-05,
+        "scaled_max": 6.0667547489205855,
+        "condition": 132893.25307995305
+      },
+      "grid_level": 3,
+      "grid_points": 19616,
+      "grid_sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+      "converged": true,
+      "energy_ha": -1.13746281588036,
+      "cycles": 6,
+      "occupied_orbitals": 1,
+      "electron_count": 2,
+      "overlap_orthogonality": 4.440892098500626e-16,
+      "electron_trace_error": 8.881784197001252e-16,
+      "old_eigen_residual_fro": 1.2156663522222216e-09,
+      "old_eigen_residual_dual": 3.2292914010433445e-10,
+      "scf_gradient_norm": 4.4715916418147427e-10,
+      "ks_gap_ha": 0.40418697100416384,
+      "wall_seconds": 0.744507747000057,
+      "status": "ok",
+      "label": "cc-pv5z",
+      "shells": [],
+      "basis": "cc-pv5z"
+    },
+    {
+      "nao": 10,
+      "overlap": {
+        "relative_min": 0.009872189486983731,
+        "scaled_min": 0.03444061574201134,
+        "scaled_max": 3.4886501912691763,
+        "condition": 101.29465214565407
+      },
+      "grid_level": 3,
+      "grid_points": 19616,
+      "grid_sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+      "converged": true,
+      "energy_ha": -1.1271312939328313,
+      "cycles": 5,
+      "occupied_orbitals": 1,
+      "electron_count": 2,
+      "overlap_orthogonality": 1.1102230246251565e-16,
+      "electron_trace_error": 4.440892098500626e-16,
+      "old_eigen_residual_fro": 7.652033171681986e-13,
+      "old_eigen_residual_dual": 2.9007150203220005e-13,
+      "scf_gradient_norm": 4.014033217037836e-13,
+      "ks_gap_ha": 0.47394764670879125,
+      "wall_seconds": 0.05137074399999619,
+      "status": "ok",
+      "label": "dictionary_full",
+      "shells": [
+        "Ha_s20",
+        "Hb_s20",
+        "Ha_p80",
+        "Hb_p80"
+      ],
+      "basis": "sto-3g"
+    }
+  ],
+  "diagnostics": {
+    "base": {
+      "embedding_overlap_fro": 0.0,
+      "embedding_fock_fro": 1.1102230246251565e-16,
+      "fock_symmetry_fro": 3.896514493326501e-17,
+      "union_nao": 10,
+      "union_overlap": {
+        "relative_min": 0.009872189486983731,
+        "scaled_min": 0.03444061574201134,
+        "scaled_max": 3.4886501912691763,
+        "condition": 101.29465214565407
+      },
+      "old_stationarity_dual": 7.004918524569577e-17,
+      "occupied_moment_fro": 9.141588159782866e-17,
+      "projected": {
+        "dual_squared": 0.0010963596196785128,
+        "rank": 8,
+        "raw_dimension": 8,
+        "scaled_min_eigen": 0.11041733672807731,
+        "scaled_max_eigen": 1.3420302502938173,
+        "eigen_cutoff": 1.3420302502938173e-09
+      },
+      "candidate_space_dual": 0.033111321623857194,
+      "local_squared": {
+        "H1": 0.0005481798077931515,
+        "H2": 0.0005481798077931573
+      },
+      "quadrature_relative_closure": 3.732538058462853e-09,
+      "riesz_abs_closure": 6.505213034913027e-19,
+      "dual_abs_closure": 4.336808689942018e-19,
+      "occupied_rotation_squared_diff": 0.0,
+      "candidates": [
+        {
+          "id": "Ha_s20",
+          "atom": 0,
+          "label": "H1",
+          "l": 0,
+          "exponent": 0.2,
+          "ao_cost": 1,
+          "score": 0.02262354618612842,
+          "projected": {
+            "dual_squared": 0.0005118248420358858,
+            "rank": 1,
+            "raw_dimension": 1,
+            "scaled_min_eigen": 0.3071131519877531,
+            "scaled_max_eigen": 0.3071131519877531,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.031855289806285214,
+            "scaled_min": 0.08071877341300066,
+            "scaled_max": 2.5339205483252085,
+            "condition": 31.39196052150481
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "Hb_s20",
+          "atom": 1,
+          "label": "H2",
+          "l": 0,
+          "exponent": 0.2,
+          "ao_cost": 1,
+          "score": 0.022623546186128635,
+          "projected": {
+            "dual_squared": 0.0005118248420358955,
+            "rank": 1,
+            "raw_dimension": 1,
+            "scaled_min_eigen": 0.3071131519877531,
+            "scaled_max_eigen": 0.3071131519877531,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.0318552898062852,
+            "scaled_min": 0.08071877341300061,
+            "scaled_max": 2.5339205483252085,
+            "condition": 31.391960521504824
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "Ha_p80",
+          "atom": 0,
+          "label": "H1",
+          "l": 1,
+          "exponent": 0.8,
+          "ao_cost": 3,
+          "score": 0.013568191530565021,
+          "projected": {
+            "dual_squared": 0.00018409582141009636,
+            "rank": 3,
+            "raw_dimension": 3,
+            "scaled_min_eigen": 0.7736483624565981,
+            "scaled_max_eigen": 1.0,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.11196002609096127,
+            "scaled_min": 0.2013741923521317,
+            "scaled_max": 1.798625807647869,
+            "condition": 8.931759261895454
+          },
+          "eligible": true,
+          "rejection": null
+        },
+        {
+          "id": "Hb_p80",
+          "atom": 1,
+          "label": "H2",
+          "l": 1,
+          "exponent": 0.8,
+          "ao_cost": 3,
+          "score": 0.013568191530564998,
+          "projected": {
+            "dual_squared": 0.00018409582141009576,
+            "rank": 3,
+            "raw_dimension": 3,
+            "scaled_min_eigen": 0.7736483624565978,
+            "scaled_max_eigen": 1.0,
+            "eigen_cutoff": 1e-09
+          },
+          "trial_overlap": {
+            "relative_min": 0.11196002609096126,
+            "scaled_min": 0.20137419235213166,
+            "scaled_max": 1.798625807647869,
+            "condition": 8.931759261895456
+          },
+          "eligible": true,
+          "rejection": null
+        }
+      ],
+      "frozen": {
+        "separation_ha": 0.4659431623106507,
+        "sin_theta_fro": 0.044194483412100166,
+        "bound": 0.16095804190387078
+      },
+      "holdout_outside_union": {
+        "status": "ok",
+        "dual_squared": 8.402749621937797e-05,
+        "rank": 10,
+        "raw_dimension": 10,
+        "scaled_min_eigen": 0.18622477603242726,
+        "scaled_max_eigen": 1.36979892891915,
+        "eigen_cutoff": 1.36979892891915e-09,
+        "embedding_overlap_fro": 0.0,
+        "embedding_fock_fro": 1.1102230246251565e-16,
+        "fock_symmetry_fro": 1.976378511973589e-16
+      },
+      "wall_seconds": 0.036518838000006326
+    }
+  },
+  "trajectories": {},
+  "first_step_exhaustive": [],
+  "grid_protocol": {
+    "level": 3,
+    "points": 19616,
+    "sha256": "fd4cb5e30ff5ec3b5dab5f588ee3088c1f0f27984bff58b00b46d13594b09f57",
+    "radial_method": "treutler_ahlrichs",
+    "angular_prune": "nwchem_prune",
+    "becke_scheme": "original_becke",
+    "atom_radii_adjust": "treutler_atomic_radii_adjust",
+    "small_rho_cutoff": 0
+  },
+  "base_deviations": {
+    "cc-pvqz": {
+      "signed_ha": 0.01612601273076608,
+      "absolute_ha": 0.01612601273076608
+    },
+    "cc-pv5z": {
+      "signed_ha": 0.01626211159860258,
+      "absolute_ha": 0.01626211159860258
+    },
+    "dictionary_full": {
+      "signed_ha": 0.005930589651073959,
+      "absolute_ha": 0.005930589651073959
+    }
+  },
+  "finished_utc": "2026-11-21T12:00:54.605471+00:00"
+}

@@ -1,0 +1,273 @@
+{
+  "status": "failed",
+  "started_utc": "2026-11-21T12:00:57.460112+00:00",
+  "case": "lih",
+  "mode": "baseline",
+  "grid_level": 3,
+  "command_args": [
+    "--mode",
+    "baseline",
+    "--case",
+    "lih",
+    "--level",
+    "3",
+    "--max-cycle",
+    "1",
+    "--output",
+    "evidence/stage3/lih-low-max-cycle.json"
+  ],
+  "config_sha256": "13cd09d044e4ae765808ad463f63468983bf88e11c512f4a61445573068abb7e",
+  "config": {
+    "molecules": {
+      "lih": {
+        "atoms": [
+          [
+            "Li",
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            "H",
+            [
+              0,
+              0,
+              3
+            ]
+          ]
+        ],
+        "candidates": [
+          [
+            "Li_s32",
+            0,
+            0,
+            0.32
+          ],
+          [
+            "Li_s08",
+            0,
+            0,
+            0.08
+          ],
+          [
+            "H_s100",
+            1,
+            0,
+            1
+          ],
+          [
+            "H_s20",
+            1,
+            0,
+            0.2
+          ],
+          [
+            "Li_p35",
+            0,
+            1,
+            0.35
+          ],
+          [
+            "Li_p12",
+            0,
+            1,
+            0.12
+          ],
+          [
+            "H_p95",
+            1,
+            1,
+            0.95
+          ],
+          [
+            "H_p35",
+            1,
+            1,
+            0.35
+          ]
+        ],
+        "holdout": [
+          [
+            "Li_d45",
+            0,
+            2,
+            0.45
+          ],
+          [
+            "H_d80",
+            1,
+            2,
+            0.8
+          ],
+          [
+            "H_s04",
+            1,
+            0,
+            0.04
+          ]
+        ]
+      },
+      "h2": {
+        "atoms": [
+          [
+            "H",
+            [
+              0,
+              0,
+              -0.7
+            ]
+          ],
+          [
+            "H",
+            [
+              0,
+              0,
+              0.7
+            ]
+          ]
+        ],
+        "candidates": [
+          [
+            "Ha_s20",
+            0,
+            0,
+            0.2
+          ],
+          [
+            "Hb_s20",
+            1,
+            0,
+            0.2
+          ],
+          [
+            "Ha_p80",
+            0,
+            1,
+            0.8
+          ],
+          [
+            "Hb_p80",
+            1,
+            1,
+            0.8
+          ]
+        ],
+        "holdout": [
+          [
+            "Ha_d80",
+            0,
+            2,
+            0.8
+          ],
+          [
+            "Hb_d80",
+            1,
+            2,
+            0.8
+          ]
+        ]
+      }
+    },
+    "unit": "Bohr",
+    "charge": 0,
+    "spin": 0,
+    "xc": "LDA_X,VWN",
+    "base_basis": "sto-3g",
+    "reference_basis": [
+      "cc-pvqz",
+      "cc-pv5z"
+    ],
+    "shell_angular_momentum_schedule": [
+      0,
+      1,
+      0
+    ],
+    "grid": {
+      "default_level": 3,
+      "sensitivity_levels": [
+        4,
+        5
+      ],
+      "small_rho_cutoff": 0,
+      "partition_gamma": 0.5
+    },
+    "scf": {
+      "conv_tol": 1e-11,
+      "conv_tol_grad": 1e-08,
+      "max_cycle": 1,
+      "init_guess": "minao",
+      "max_memory_mb": 800,
+      "threads": 1
+    },
+    "thresholds": {
+      "normalized_eigen_relative": 1e-09,
+      "linear_check": 1e-10,
+      "stationarity_dual": 1e-07,
+      "quadrature_relative": 5e-05,
+      "score_tie_relative": 1e-10
+    }
+  },
+  "source_sha256": {
+    "run_baseline.py": "15966565a235a199abfdea112a149064fa5df3a1ce6afd13bb7da2d934396344",
+    "gaussian_rks.py": "284e501d7dad1baa9ac10288d21394c01fa681aee441f52a8dd84caa48bca53c"
+  },
+  "versions": {
+    "python": "3.14.4",
+    "pyscf": "2.15.0",
+    "libxc": "7.1.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0"
+  },
+  "references": {},
+  "fits": [
+    {
+      "nao": 6,
+      "overlap": {
+        "relative_min": 0.20339047710435337,
+        "scaled_min": 0.3433399551910098,
+        "scaled_max": 1.6880827464446757,
+        "condition": 4.916651036159037
+      },
+      "grid_level": 3,
+      "grid_points": 23536,
+      "grid_sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+      "converged": false,
+      "energy_ha": -7.77362626461357,
+      "cycles": 1,
+      "occupied_orbitals": 2,
+      "electron_count": 4,
+      "overlap_orthogonality": 4.738243812902387e-16,
+      "electron_trace_error": 8.881784197001252e-16,
+      "old_eigen_residual_fro": 0.22357388827491628,
+      "old_eigen_residual_dual": 0.1284598175762989,
+      "scf_gradient_norm": 0.16509917113337538,
+      "ks_gap_ha": 0.1991209309683759,
+      "wall_seconds": 0.07005466900000101,
+      "status": "scf_check_failed",
+      "label": "base",
+      "shells": [],
+      "basis": "sto-3g"
+    }
+  ],
+  "diagnostics": {},
+  "trajectories": {},
+  "first_step_exhaustive": [],
+  "grid_protocol": {
+    "level": 3,
+    "points": 23536,
+    "sha256": "503b8fe2b1972c856561b7d5016c24ed9c1bc57190110497ffdddf8200a93ee2",
+    "radial_method": "treutler_ahlrichs",
+    "angular_prune": "nwchem_prune",
+    "becke_scheme": "original_becke",
+    "atom_radii_adjust": "treutler_atomic_radii_adjust",
+    "small_rho_cutoff": 0
+  },
+  "finished_utc": "2026-11-21T12:00:57.614757+00:00",
+  "error": {
+    "type": "NumericalIssue",
+    "message": "base: scf_check_failed; raw SCF diagnostics saved."
+  }
+}

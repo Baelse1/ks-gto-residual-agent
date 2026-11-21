@@ -1,0 +1,395 @@
+{
+  "grid_levels": [
+    3,
+    4,
+    5
+  ],
+  "reference_differences_ha": {
+    "3": 0.0005745772273701988,
+    "4": 0.0005748812390109492,
+    "5": 0.0005748860948440182
+  },
+  "lowest_successful_overlap_ratio": 2.7005043971619992e-05,
+  "greatest_old_eigen_dual": 5.688180774639135e-09,
+  "greatest_quadrature_relative_closure": 2.3301750588127906e-05,
+  "h2_atom_relative_difference": 1.0680239673532181e-14,
+  "first_step_exhaustive": {
+    "3": {
+      "score_order": [
+        "Li_s32",
+        "Li_s08",
+        "H_s20",
+        "H_s100"
+      ],
+      "energy_drop_order": [
+        "Li_s32",
+        "H_s20",
+        "Li_s08",
+        "H_s100"
+      ]
+    },
+    "4": {
+      "score_order": [
+        "Li_s32",
+        "Li_s08",
+        "H_s20",
+        "H_s100"
+      ],
+      "energy_drop_order": [
+        "Li_s32",
+        "H_s20",
+        "Li_s08",
+        "H_s100"
+      ]
+    },
+    "5": {
+      "score_order": [
+        "Li_s32",
+        "Li_s08",
+        "H_s20",
+        "H_s100"
+      ],
+      "energy_drop_order": [
+        "Li_s32",
+        "H_s20",
+        "Li_s08",
+        "H_s100"
+      ]
+    }
+  },
+  "paired_strategy_differences": [
+    {
+      "budget_ao": 1,
+      "left": "local",
+      "right": "global",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        }
+      ]
+    },
+    {
+      "budget_ao": 1,
+      "left": "local",
+      "right": "fixed",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        }
+      ]
+    },
+    {
+      "budget_ao": 1,
+      "left": "global",
+      "right": "fixed",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        }
+      ]
+    },
+    {
+      "budget_ao": 4,
+      "left": "local",
+      "right": "global",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        }
+      ]
+    },
+    {
+      "budget_ao": 4,
+      "left": "local",
+      "right": "fixed",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.015950901200767476
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.015950901200767476
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.015961475865466923
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.015961475865466923
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.015962522613932606
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.015962522613932606
+        }
+      ]
+    },
+    {
+      "budget_ao": 4,
+      "left": "global",
+      "right": "fixed",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.015950901200767476
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.015950901200767476
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.015961475865466923
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.015961475865466923
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.015962522613932606
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.015962522613932606
+        }
+      ]
+    },
+    {
+      "budget_ao": 5,
+      "left": "local",
+      "right": "global",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 0.0
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 0.0
+        }
+      ]
+    },
+    {
+      "budget_ao": 5,
+      "left": "local",
+      "right": "fixed",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 4.705030602332627
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 4.705030602332627
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 4.7052118026105205
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 4.7052118026105205
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 4.705211665132936
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 4.705211665132936
+        }
+      ]
+    },
+    {
+      "budget_ao": 5,
+      "left": "global",
+      "right": "fixed",
+      "values": [
+        {
+          "grid_level": 3,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 4.705030602332627
+        },
+        {
+          "grid_level": 3,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 4.705030602332627
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 4.7052118026105205
+        },
+        {
+          "grid_level": 4,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 4.7052118026105205
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pvqz",
+          "error_right_minus_left_mha": 4.705211665132936
+        },
+        {
+          "grid_level": 5,
+          "reference": "cc-pv5z",
+          "error_right_minus_left_mha": 4.705211665132936
+        }
+      ]
+    }
+  ]
+}

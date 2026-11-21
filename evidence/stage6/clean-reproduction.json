@@ -1,0 +1,32 @@
+{
+  "clean_source": "Git index export to a fresh directory on D: with fresh Windows and WSL environments",
+  "agent": {
+    "pip_check": "passed",
+    "cli_help": "passed",
+    "local_tool_checks": "passed",
+    "live_model_calls": 1,
+    "tool": "search_literature",
+    "tool_url": "https://api.crossref.org/works?query.bibliographic=Kohn%E2%80%93Sham+eigenvalue+a+posteriori+error+estimates+localized+residuals+atom-centered+orbital+Galerkin+discretization+spectral+gap+frozen+Hamiltonian+SCF+stability&rows=5&select=DOI%2Ctitle%2Cpublished%2CURL",
+    "http_status": 200,
+    "exit_code": 0
+  },
+  "stage3": {
+    "matched_rows_excluding_timing": 36,
+    "maximum_absolute_differences": {
+      "energy_ha": 0.0,
+      "abs_qz_mha": 0.0,
+      "abs_5z_mha": 5.329070518200751e-12
+    },
+    "SCF_negative_control": "passed",
+    "near_linear_negative_control": "passed"
+  },
+  "stage4": {
+    "partition_sweep_identical_excluding_timing": true,
+    "retry_note": "First isolated invocation failed during the SciPy/NumPy import with NameError for range. A separate invocation in the same fresh environment completed and matched the archived science."
+  },
+  "pdf": {
+    "pages": 7,
+    "extracted_text_identical": true,
+    "original_sha256": "2574e820e96863c697d8222ff5994fc799b2c28826f61225c52a026b6925d684"
+  }
+}

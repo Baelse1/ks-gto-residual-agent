@@ -1,0 +1,190 @@
+{
+  "goal": "Investigate whether atom-local residual screening improves equal-AO augmentation of fixed-geometry LiH/LDA. Establish which published theorem hypotheses transfer to the finite frozen calculation and which require a separate SCF stability argument.",
+  "next_question": "Does the search identify a preprint on a supported host whose theorem states the residual norm and spectral separation hypotheses to test for frozen LiH/LDA?",
+  "findings": [],
+  "recent_actions": [
+    {
+      "tool": "search_literature",
+      "arguments": {
+        "query": "Kohn–Sham eigenvalue a posteriori residual error estimation localized basis enrichment atom-centered orbitals spectral gap frozen Hamiltonian"
+      },
+      "result": {
+        "ok": true,
+        "url": "https://api.crossref.org/works?query.bibliographic=Kohn%E2%80%93Sham+eigenvalue+a+posteriori+residual+error+estimation+localized+basis+enrichment+atom-centered+orbitals+spectral+gap+frozen+Hamiltonian&rows=5&select=DOI%2Ctitle%2Cpublished%2CURL",
+        "http_status": 200,
+        "scope": "bibliographic metadata",
+        "items": [
+          {
+            "doi": "10.3390/computation4010010",
+            "title": "Localized Polycentric Orbital Basis Set for Quantum Monte Carlo Calculations Derived from the Decomposition of Kohn-Sham Optimized Orbitals",
+            "url": "https://doi.org/10.3390/computation4010010",
+            "published": {
+              "date-parts": [
+                [
+                  2016,
+                  2,
+                  6
+                ]
+              ]
+            }
+          },
+          {
+            "doi": "10.1039/d0fd00048e",
+            "title": "<i>A posteriori</i>\n                    error estimation for the non-self-consistent Kohn–Sham equations",
+            "url": "https://doi.org/10.1039/d0fd00048e",
+            "published": {
+              "date-parts": [
+                [
+                  2020
+                ]
+              ]
+            }
+          },
+          {
+            "doi": "10.1016/j.crma.2003.10.040",
+            "title": "A posteriori residual error estimation of a cell-centered finite volume method",
+            "url": "https://doi.org/10.1016/j.crma.2003.10.040",
+            "published": {
+              "date-parts": [
+                [
+                  2004,
+                  2,
+                  6
+                ]
+              ]
+            }
+          },
+          {
+            "doi": "10.26434/chemrxiv.15003266/v1",
+            "title": "Quantum crystallography: X-ray orbitals are Kohn-Sham orbitals",
+            "url": "https://doi.org/10.26434/chemrxiv.15003266/v1",
+            "published": {
+              "date-parts": [
+                [
+                  2026,
+                  5,
+                  13
+                ]
+              ]
+            }
+          },
+          {
+            "doi": "10.4310/cms.2015.v13.n7.a5",
+            "title": "&lt;i&gt;A posteriori&lt;/i&gt; error estimator for adaptive local basis functions to solve Kohn–Sham density functional theory",
+            "url": "https://doi.org/10.4310/cms.2015.v13.n7.a5",
+            "published": {
+              "date-parts": [
+                [
+                  2015
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "read_source",
+      "arguments": {
+        "url": "https://doi.org/10.1039/d0fd00048e",
+        "focus": "spectral gap"
+      },
+      "result": {
+        "ok": false,
+        "error_type": "ValueError",
+        "error": "Public HTTPS source is outside the configured scholarly hosts."
+      }
+    },
+    {
+      "tool": "read_source",
+      "arguments": {
+        "url": "https://pubs.rsc.org/en/content/articlehtml/2020/fd/d0fd00048e",
+        "focus": "spectral gap"
+      },
+      "result": {
+        "ok": false,
+        "error_type": "ValueError",
+        "error": "Public HTTPS source is outside the configured scholarly hosts."
+      }
+    },
+    {
+      "tool": "search_literature",
+      "arguments": {
+        "query": "a posteriori error estimation for the non-self-consistent Kohn–Sham equations arXiv preprint residual spectral separation"
+      },
+      "result": {
+        "ok": true,
+        "url": "https://api.crossref.org/works?query.bibliographic=a+posteriori+error+estimation+for+the+non-self-consistent+Kohn%E2%80%93Sham+equations+arXiv+preprint+residual+spectral+separation&rows=5&select=DOI%2Ctitle%2Cpublished%2CURL",
+        "http_status": 200,
+        "scope": "bibliographic metadata",
+        "items": [
+          {
+            "doi": "10.1039/d0fd00048e",
+            "title": "<i>A posteriori</i>\n                    error estimation for the non-self-consistent Kohn–Sham equations",
+            "url": "https://doi.org/10.1039/d0fd00048e",
+            "published": {
+              "date-parts": [
+                [
+                  2020
+                ]
+              ]
+            }
+          },
+          {
+            "doi": "10.1103/physrev.140.a1133",
+            "title": "Self-Consistent Equations Including Exchange and Correlation Effects",
+            "url": "https://doi.org/10.1103/physrev.140.a1133",
+            "published": {
+              "date-parts": [
+                [
+                  1965,
+                  11,
+                  15
+                ]
+              ]
+            }
+          },
+          {
+            "doi": "10.58837/chula.the.2010.1250",
+            "title": "Residual type a posteriori error estimates for semi-linear parabolic partial differential equations",
+            "url": "https://doi.org/10.58837/chula.the.2010.1250",
+            "published": {}
+          },
+          {
+            "doi": "10.1088/0305-4470/38/25/004",
+            "title": "Symmetry breaking in the self-consistent Kohn–Sham equations",
+            "url": "https://doi.org/10.1088/0305-4470/38/25/004",
+            "published": {
+              "date-parts": [
+                [
+                  2005,
+                  6,
+                  8
+                ]
+              ]
+            }
+          },
+          {
+            "doi": "10.1002/9781118032824.ch6",
+            "title": "The Equilibrated Residual Method",
+            "url": "https://doi.org/10.1002/9781118032824.ch6",
+            "published": {
+              "date-parts": [
+                [
+                  2000,
+                  8,
+                  21
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "status": "step_budget",
+  "model_calls_total": 4,
+  "steps_total": 4,
+  "config_sha256": "5d866d7eaca453cadefac170190f70a22ea29b70ce9373641d5da5a9a8a9a396",
+  "sources": {}
+}

@@ -1,0 +1,23 @@
+{
+  "mode": "operator tool integration check; no model",
+  "attempts": [
+    {
+      "ok": true,
+      "requested_url": "https://michael-herbst.com/publications/2020.04.28_error_nonscf_kohn_sham.pdf",
+      "url": "https://michael-herbst.com/publications/2020.04.28_error_nonscf_kohn_sham.pdf",
+      "scope": "PDF pages 1–4, first 14000 extracted characters",
+      "http_status": 200,
+      "source_id": "58bb9b5d2084",
+      "excerpt_sha256": "f00fff33d9320340bbaa80cc1ab0835e9952eafd1508be13ae7d8d73febf29a4"
+    }
+  ],
+  "finding": {
+    "source_id": "58bb9b5d2084",
+    "url": "https://michael-herbst.com/publications/2020.04.28_error_nonscf_kohn_sham.pdf",
+    "scope": "PDF pages 1–4, first 14000 extracted characters",
+    "excerpt_sha256": "f00fff33d9320340bbaa80cc1ab0835e9952eafd1508be13ae7d8d73febf29a4",
+    "source_claim": "The paper distinguishes basis truncation, iterative convergence, and rounding error in non-self-consistent plane-wave Kohn-Sham calculations.",
+    "inference": "Keep the frozen projected-orbital check and the self-consistent energy comparison separate in the LiH design.",
+    "uncertainty": "The four-page extract does not establish a nonlinear stability bound for atom-centered Gaussian RKS."
+  }
+}

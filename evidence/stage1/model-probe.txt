@@ -1,0 +1,10 @@
+2026-11-21 Asia/Shanghai
+CLI: codex-cli 0.171.0-alpha.13
+codex login status: Logged in using ChatGPT
+Command: codex exec --ephemeral --sandbox read-only "Return exactly KS_STAGE1_MODEL_OK. Do not use tools."
+Model: gpt-6.2-sol
+Observed: five reconnect retries on request timeouts; fell back from WebSockets to HTTPS.
+Final output: KS_STAGE1_MODEL_OK
+Observed CLI token summary: 4,400
+Process exit code: 0
+This is a live model probe, with no tool action requested. Session identifiers omitted.

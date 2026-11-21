@@ -1,0 +1,66 @@
+{
+  "goal": "Investigate whether atom-local residual screening improves equal-AO augmentation of fixed-geometry LiH/LDA. Establish which published theorem hypotheses transfer to the finite frozen calculation and which require a separate SCF stability argument.",
+  "next_question": "Find primary literature connecting atom-centered orbital discretization, residual localization and spectral separation. Construct a Crossref query from the knowledge gap, then read an accessible primary source.",
+  "budget": {
+    "steps": 4,
+    "model_calls": 4,
+    "wall_seconds": 660,
+    "model_timeout_seconds": 185
+  },
+  "permissions": {
+    "tools": [
+      "search_literature",
+      "read_source",
+      "read_file",
+      "write_file",
+      "run_check",
+      "save_finding"
+    ],
+    "read_paths": [
+      "README.md",
+      "docs/",
+      "scripts/",
+      "experiments/",
+      "research_notes/",
+      "evidence/stage1/",
+      "evidence/stage2-smoke.json"
+    ],
+    "write_paths": [
+      "experiments/",
+      "research_notes/"
+    ],
+    "commands": {
+      "git_status": {
+        "argv": [
+          "git",
+          "status",
+          "--short",
+          "--branch"
+        ],
+        "timeout_seconds": 10
+      },
+      "numerics_smoke": {
+        "argv": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--cd",
+          "/mnt/d/ksagent",
+          "--",
+          "env",
+          "PYSCF_TMPDIR=/mnt/d/ksagent/.scratch",
+          "OMP_NUM_THREADS=1",
+          "OPENBLAS_NUM_THREADS=1",
+          "/mnt/d/ks_research/.venv-pyscf/bin/python",
+          "scripts/stage1_smoke.py",
+          "--output",
+          "evidence/stage2-smoke.json"
+        ],
+        "timeout_seconds": 40,
+        "artifacts": [
+          "evidence/stage2-smoke.json"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{"time_utc": "2026-11-21T12:00:28.363689+00:00", "event": "start", "case": "lih", "level": 4, "mode": "comparison"}
+{"time_utc": "2026-11-21T12:00:28.438714+00:00", "event": "scf_start", "label": "base", "shells": [], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:28.601800+00:00", "event": "scf_end", "label": "base", "status": "ok", "energy_ha": -7.792283482689706, "nao": 6, "wall_seconds": 0.1383452430000034}
+{"time_utc": "2026-11-21T12:00:28.723226+00:00", "event": "diagnostic", "label": "base", "old_dual": 4.454855323219277e-11, "candidate_dual": 0.08594675156212037, "quadrature_relative_closure": 1.0654251335243536e-07}
+{"time_utc": "2026-11-21T12:00:28.725876+00:00", "event": "scf_start", "label": "cc-pvqz", "shells": [], "basis": "cc-pvqz"}
+{"time_utc": "2026-11-21T12:00:29.754824+00:00", "event": "scf_end", "label": "cc-pvqz", "status": "ok", "energy_ha": -7.918927123809793, "nao": 85, "wall_seconds": 1.0042171359999656}
+{"time_utc": "2026-11-21T12:00:29.757429+00:00", "event": "scf_start", "label": "cc-pv5z", "shells": [], "basis": "cc-pv5z"}
+{"time_utc": "2026-11-21T12:00:33.638323+00:00", "event": "scf_end", "label": "cc-pv5z", "status": "ok", "energy_ha": -7.919502005048804, "nao": 146, "wall_seconds": 3.8516701910000393}
+{"time_utc": "2026-11-21T12:00:33.641418+00:00", "event": "scf_start", "label": "dictionary_full", "shells": ["Li_s32", "Li_s08", "H_s100", "H_s20", "Li_p35", "Li_p12", "H_p95", "H_p35"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:33.851801+00:00", "event": "scf_end", "label": "dictionary_full", "status": "ok", "energy_ha": -7.816383102082391, "nao": 22, "wall_seconds": 0.1794176640000842}
+{"time_utc": "2026-11-21T12:00:33.858614+00:00", "event": "scf_start", "label": "first:Li_s32", "shells": ["Li_s32"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:34.014868+00:00", "event": "scf_end", "label": "first:Li_s32", "status": "ok", "energy_ha": -7.809083474866494, "nao": 7, "wall_seconds": 0.12961557999994966}
+{"time_utc": "2026-11-21T12:00:34.035886+00:00", "event": "scf_start", "label": "first:Li_s08", "shells": ["Li_s08"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:34.165404+00:00", "event": "scf_end", "label": "first:Li_s08", "status": "ok", "energy_ha": -7.7983121891252605, "nao": 7, "wall_seconds": 0.10966477699992083}
+{"time_utc": "2026-11-21T12:00:34.176799+00:00", "event": "scf_start", "label": "first:H_s100", "shells": ["H_s100"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:34.315591+00:00", "event": "scf_end", "label": "first:H_s100", "status": "ok", "energy_ha": -7.794156114492569, "nao": 7, "wall_seconds": 0.12055467100003625}
+{"time_utc": "2026-11-21T12:00:34.339540+00:00", "event": "scf_start", "label": "first:H_s20", "shells": ["H_s20"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:34.480838+00:00", "event": "scf_end", "label": "first:H_s20", "status": "ok", "energy_ha": -7.798513994102731, "nao": 7, "wall_seconds": 0.11572694400001637}
+{"time_utc": "2026-11-21T12:00:34.500353+00:00", "event": "selection", "label": "local:1", "shell": "Li_s32", "angular": 0, "score": 0.07822416501676195, "budget_ao": 1, "eligible_pool": ["Li_s32", "Li_s08"], "score_ties": ["Li_s32"], "atom_ties": ["Li1"]}
+{"time_utc": "2026-11-21T12:00:34.503251+00:00", "event": "scf_start", "label": "local:1", "shells": ["Li_s32"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:34.656205+00:00", "event": "scf_end", "label": "local:1", "status": "ok", "energy_ha": -7.809083474866494, "nao": 7, "wall_seconds": 0.12717011199993067}
+{"time_utc": "2026-11-21T12:00:34.772041+00:00", "event": "diagnostic", "label": "local:1", "old_dual": 3.0142908473692437e-09, "candidate_dual": 0.032376445129051315, "quadrature_relative_closure": 6.863351241459983e-07}
+{"time_utc": "2026-11-21T12:00:34.798202+00:00", "event": "selection", "label": "local:2", "shell": "H_p35", "angular": 1, "score": 0.009773261963587071, "budget_ao": 4, "eligible_pool": ["H_p95", "H_p35"], "score_ties": ["H_p35"], "atom_ties": ["H2"]}
+{"time_utc": "2026-11-21T12:00:34.801241+00:00", "event": "scf_start", "label": "local:2", "shells": ["Li_s32", "H_p35"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:34.961867+00:00", "event": "scf_end", "label": "local:2", "status": "ok", "energy_ha": -7.809669430444828, "nao": 10, "wall_seconds": 0.12674148899998272}
+{"time_utc": "2026-11-21T12:00:35.065569+00:00", "event": "diagnostic", "label": "local:2", "old_dual": 3.8038241300260645e-10, "candidate_dual": 0.031056907676599535, "quadrature_relative_closure": 7.31926995708875e-07}
+{"time_utc": "2026-11-21T12:00:35.087502+00:00", "event": "selection", "label": "local:3", "shell": "H_s20", "angular": 0, "score": 0.026114541148039787, "budget_ao": 5, "eligible_pool": ["H_s100", "H_s20"], "score_ties": ["H_s20"], "atom_ties": ["H2"]}
+{"time_utc": "2026-11-21T12:00:35.090381+00:00", "event": "scf_start", "label": "local:3", "shells": ["Li_s32", "H_p35", "H_s20"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:35.245595+00:00", "event": "scf_end", "label": "local:3", "status": "ok", "energy_ha": -7.814465064762807, "nao": 11, "wall_seconds": 0.11254372000007606}
+{"time_utc": "2026-11-21T12:00:35.342882+00:00", "event": "diagnostic", "label": "local:3", "old_dual": 1.0270526077174304e-09, "candidate_dual": 0.016634649644468653, "quadrature_relative_closure": 2.2934123873535317e-07}
+{"time_utc": "2026-11-21T12:00:35.354616+00:00", "event": "selection", "label": "global:1", "shell": "Li_s32", "angular": 0, "score": 0.07822416501676195, "budget_ao": 1, "eligible_pool": ["Li_s32", "Li_s08", "H_s100", "H_s20"], "score_ties": ["Li_s32"], "atom_ties": []}
+{"time_utc": "2026-11-21T12:00:35.362844+00:00", "event": "scf_start", "label": "global:1", "shells": ["Li_s32"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:35.506746+00:00", "event": "scf_end", "label": "global:1", "status": "ok", "energy_ha": -7.809083474866494, "nao": 7, "wall_seconds": 0.10943334099999902}
+{"time_utc": "2026-11-21T12:00:35.622955+00:00", "event": "diagnostic", "label": "global:1", "old_dual": 3.0142908473692437e-09, "candidate_dual": 0.032376445129051315, "quadrature_relative_closure": 6.863351241459983e-07}
+{"time_utc": "2026-11-21T12:00:35.648265+00:00", "event": "selection", "label": "global:2", "shell": "H_p35", "angular": 1, "score": 0.009773261963587071, "budget_ao": 4, "eligible_pool": ["Li_p35", "Li_p12", "H_p95", "H_p35"], "score_ties": ["H_p35"], "atom_ties": []}
+{"time_utc": "2026-11-21T12:00:35.653806+00:00", "event": "scf_start", "label": "global:2", "shells": ["Li_s32", "H_p35"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:35.819252+00:00", "event": "scf_end", "label": "global:2", "status": "ok", "energy_ha": -7.809669430444828, "nao": 10, "wall_seconds": 0.11825583499989989}
+{"time_utc": "2026-11-21T12:00:35.916974+00:00", "event": "diagnostic", "label": "global:2", "old_dual": 3.8038241300260645e-10, "candidate_dual": 0.031056907676599535, "quadrature_relative_closure": 7.31926995708875e-07}
+{"time_utc": "2026-11-21T12:00:35.936198+00:00", "event": "selection", "label": "global:3", "shell": "H_s20", "angular": 0, "score": 0.026114541148039787, "budget_ao": 5, "eligible_pool": ["Li_s08", "H_s100", "H_s20"], "score_ties": ["H_s20"], "atom_ties": []}
+{"time_utc": "2026-11-21T12:00:35.941617+00:00", "event": "scf_start", "label": "global:3", "shells": ["Li_s32", "H_p35", "H_s20"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:36.113135+00:00", "event": "scf_end", "label": "global:3", "status": "ok", "energy_ha": -7.814465064762807, "nao": 11, "wall_seconds": 0.13488710900003298}
+{"time_utc": "2026-11-21T12:00:36.212749+00:00", "event": "diagnostic", "label": "global:3", "old_dual": 1.0270526077174304e-09, "candidate_dual": 0.016634649644468653, "quadrature_relative_closure": 2.2934123873535317e-07}
+{"time_utc": "2026-11-21T12:00:36.226422+00:00", "event": "selection", "label": "fixed:1", "shell": "Li_s32", "angular": 0, "score": 0.07822416501676195, "budget_ao": 1, "eligible_pool": ["Li_s32", "Li_s08", "H_s100", "H_s20"], "score_ties": ["Li_s32"], "atom_ties": []}
+{"time_utc": "2026-11-21T12:00:36.228401+00:00", "event": "scf_start", "label": "fixed:1", "shells": ["Li_s32"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:36.365798+00:00", "event": "scf_end", "label": "fixed:1", "status": "ok", "energy_ha": -7.809083474866494, "nao": 7, "wall_seconds": 0.10014432299999498}
+{"time_utc": "2026-11-21T12:00:36.479695+00:00", "event": "diagnostic", "label": "fixed:1", "old_dual": 3.0142908473692437e-09, "candidate_dual": 0.032376445129051315, "quadrature_relative_closure": 6.863351241459983e-07}
+{"time_utc": "2026-11-21T12:00:36.498954+00:00", "event": "selection", "label": "fixed:2", "shell": "Li_p35", "angular": 1, "score": 0.009376862850598917, "budget_ao": 4, "eligible_pool": ["Li_p35", "Li_p12", "H_p95", "H_p35"], "score_ties": ["Li_p35"], "atom_ties": []}
+{"time_utc": "2026-11-21T12:00:36.503127+00:00", "event": "scf_start", "label": "fixed:2", "shells": ["Li_s32", "Li_p35"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:36.654420+00:00", "event": "scf_end", "label": "fixed:2", "status": "ok", "energy_ha": -7.809653468968962, "nao": 10, "wall_seconds": 0.11794624900005601}
+{"time_utc": "2026-11-21T12:00:36.753628+00:00", "event": "diagnostic", "label": "fixed:2", "old_dual": 2.181161330753006e-09, "candidate_dual": 0.0309518269503994, "quadrature_relative_closure": 6.876269391121709e-07}
+{"time_utc": "2026-11-21T12:00:36.767750+00:00", "event": "selection", "label": "fixed:3", "shell": "Li_s08", "angular": 0, "score": 0.0035139700204936523, "budget_ao": 5, "eligible_pool": ["Li_s08", "H_s100", "H_s20"], "score_ties": ["Li_s08"], "atom_ties": []}
+{"time_utc": "2026-11-21T12:00:36.770300+00:00", "event": "scf_start", "label": "fixed:3", "shells": ["Li_s32", "Li_p35", "Li_s08"], "basis": "sto-3g"}
+{"time_utc": "2026-11-21T12:00:36.922987+00:00", "event": "scf_end", "label": "fixed:3", "status": "ok", "energy_ha": -7.809759852960196, "nao": 11, "wall_seconds": 0.11850897600004373}
+{"time_utc": "2026-11-21T12:00:37.034175+00:00", "event": "diagnostic", "label": "fixed:3", "old_dual": 2.783147206018148e-09, "candidate_dual": 0.030812986812840913, "quadrature_relative_closure": 7.155423823922952e-07}
+{"time_utc": "2026-11-21T12:00:37.060770+00:00", "event": "stop", "status": "ok", "error": null}

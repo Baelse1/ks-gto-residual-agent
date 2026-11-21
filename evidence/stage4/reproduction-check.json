@@ -1,0 +1,27 @@
+{
+  "mode": "operator reproduction, separate from agent trajectory",
+  "criteria": "all non-timing fields compared; numeric tolerance 1e-11",
+  "comparisons": [
+    {
+      "name": "original",
+      "revision": "13-stage4_probe.py",
+      "source_result": "15/stage4_probe.json",
+      "source_sha256": "520412077dc7e31c53c6ad429e4bcecb8abc4ba81ec04f0e9f9b3046bc94529a",
+      "max_abs_difference": 0
+    },
+    {
+      "name": "ablation",
+      "revision": "20-stage4_probe.py",
+      "source_result": "21/stage4_followup.json",
+      "source_sha256": "20fecd5ada37be1895242ab20ace5cd0c81e2892bc53d8258c1e90aa17662a78",
+      "max_abs_difference": 0
+    },
+    {
+      "name": "partition-sweep",
+      "revision": "31-stage4_probe.py",
+      "source_result": "33/stage4_probe.json",
+      "source_sha256": "cc8159c54612a4d2ac0bd5831d65654ad750461c4be55be805471c0cba4672ab",
+      "max_abs_difference": 0
+    }
+  ]
+}
